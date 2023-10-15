@@ -1,0 +1,20 @@
+//compute gcd of 2 numbers
+
+program 
+{
+	int #num1, int #num2
+	
+	input(#num1)
+	input(#num2)
+	
+	aslongas (#num1 != #num2) repeat {
+		given (#num1 > #num2) then {
+			#num1 = #num1 - #num2
+		}
+		otherwise {
+			#num2 = #num2 - #num1
+		}
+	}
+	
+	output(#num1)
+}

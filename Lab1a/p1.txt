@@ -1,0 +1,22 @@
+//compute de min of 3 numbers
+
+program {
+
+	int #a, int #b, int #c, int #mini
+	
+	input(#a)
+	input(#b)
+	input(#c)
+
+	#mini = #a
+	
+	given (#mini > #b) then {
+		#mini = #b
+	}
+	
+	given (#mini > #c) then {
+		#mini = #c
+	}
+	
+	output(#mini)
+}

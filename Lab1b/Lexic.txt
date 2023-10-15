@@ -1,0 +1,30 @@
+Alphabet:
+	a. lower (a-z) and upper (A-Z) case letters of the English alphabet
+	b. decimal digits (0-9)
+
+Lexic:
+
+	a.special symbols
+	- operators
+		+ - * / % = < <= == != => > ! && ||
+	- separators 
+		space , [] () {}                                            
+	- reserved words
+		program input output int char str given then otherwise aslongas repeat
+		
+	b.identifiers
+	- a sequence of letters such that the first character is a #
+		identifier ::= #letter | #letter{letter}
+		letter ::= "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
+		
+	c.constants
+	- integer
+		integer ::= "0" | number | "-"number
+		number ::= nonzerodigit{digit}
+		digit ::= "0" | nonzerodigit
+		nonzerodigit ::= "1" | ... | "9"		
+	- character
+		character ::= 'letter' | 'digit'
+	- string
+		string ::= "char{char}"
+		char ::= letter | digit

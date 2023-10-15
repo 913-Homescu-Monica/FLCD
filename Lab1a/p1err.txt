@@ -1,0 +1,22 @@
+//compute de min of 3 numbers
+
+program {
+
+	int #a, int #b, int #c, int mini      //mini is not a valid identifier name
+	
+	input(#a)
+	input(#b)
+	input(#c)
+
+	#mini = #a
+	
+	given (#mini > #b) {          //ifstmt is missing 'then' keyword
+		#mini = #b
+	}
+	
+	given (#mini > #c) then {
+		#mini = #c
+	}
+	
+	output(#mini)
+}

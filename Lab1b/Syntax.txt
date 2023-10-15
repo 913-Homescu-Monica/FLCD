@@ -1,0 +1,39 @@
+program ::= "program" "{" decllist "\n" cmpdstmt "}"
+
+decllist ::= declaration | declaration "," decllist
+
+declaration ::= type identifier
+
+type1 ::= "INT" | "CHAR" | "STR"
+
+arraydecl ::= type1 "[" nr "]"
+
+type ::= type1 | arraydecl
+
+cmpdstmt ::= "{" stmtlist "}"
+
+stmtlist ::= stmt | stmt "\n" stmtlist
+
+stmt ::= simplstmt | structstmt
+
+simplstmt ::= assignstmt | iostmt | decllist
+
+assignstmt ::= identifier "=" expression
+
+expression ::= expression "+" term | term
+
+term ::= term "*" factor | factor
+
+factor ::= "(" expression ")" | identifier | const
+
+iostmt ::= "INPUT" "(" identifier ")" | "OUTPUT" "(" identifier ")" | "OUTPUT" "(" const ")"
+
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+
+ifstmt ::= "GIVEN" "(" condition ")" "THEN" cmpdstmt ["OTHERWISE" cmpdstmt]
+
+whilestmt ::= "ASLONGAS" "(" condition ")" "REPEAT" cmpdstmt
+
+condition ::= expression relation expression
+
+relation ::= "<" | "<=" | "==" | "!=" | ">=" | ">"
