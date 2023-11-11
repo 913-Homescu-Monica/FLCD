@@ -179,9 +179,6 @@ public class LexicalAnalyzer {
             lineNumber++;
         }
 
-        for (Pair<String, Integer> t : tokens)
-            System.out.println(t.getFirst());
-
         return tokens;
     }
 
